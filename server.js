@@ -33,8 +33,12 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects');
+});
+
 app.get('/about', (req, res) => {
-  res.send({
+  res.render('about', {
     name: 'kevin',
     height: 179,
   });
