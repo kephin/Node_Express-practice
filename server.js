@@ -4,7 +4,7 @@ const fs = require('fs');
 // const hbs = require('hbs');
 // const pug = require('pug');
 
-const host = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.set('view engine', 'pug');
@@ -48,7 +48,7 @@ app.get('/bad', (req, res) => {
   res.send('<h1>Cannot reach to the page...</h1>');
 });
 
-app.listen(host, () => {
+app.listen(port, () => {
   // console.log(__dirname);
-  console.log(`Server is up on http://localhost:${host}...`);
+  console.log(`Server is up on http://localhost:${port}...`);
 });
